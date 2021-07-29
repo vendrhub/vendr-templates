@@ -1,0 +1,29 @@
+﻿{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Vendr, Outfield Digital Ltd",
+    "classifications": [ "Vendr", "Umbraco" ],
+    "identity": "Vendr.PaymentProvider",
+    "name": "Vendr Payment Provider Project",
+    "shortName": "vendrpaymentprovider",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "Provider1",
+    "primaryOutputs": [
+        {
+            "path": "Vendr.Contrib.PaymentProviders.Provider1.sln"
+        }
+    ],
+    "symbols": {
+        "sourceNameLower": {
+            "type": "generated",
+            "generator": "casing",
+            "parameters": {
+                "source": "name",
+                "toLower": true
+            },
+            "replaces": "Provider1Lower"
+        }
+    }
+}

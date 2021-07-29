@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>Vendr Community</Authors>
+        <Company>Vendr Community</Company>
+        <Copyright>Vendr Community</Copyright>
+        <Description>Provider1 payment provider for Vendr, the eCommerce package for Umbraco</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://vendr.net</PackageProjectUrl>
+        <PackageIcon>logo-128.png</PackageIcon>
+        <PackageTags>umbraco, vendr, ecommerce, Provider1Lower</PackageTags>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Vendr.Core" Version="2.0.0-alpha0113" />
+        <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\assets\logo-128.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
+
+</Project>
