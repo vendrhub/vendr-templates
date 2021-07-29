@@ -5,7 +5,7 @@ This repository contains a number of templates for extending Vendr, the eCommerc
 The templates can be used via the `dotnet new` command.
 
 ## Pre-requisite
-You must be using Visual Studio 2019 and be using Vendr v2.x to work with these templates.
+You must be using Visual Studio 2019 and Vendr v2.x to work with these templates.
 
 
 ## Installation 
