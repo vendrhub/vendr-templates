@@ -1,3 +1,3 @@
 ﻿# Vendr .NET Templates
 
-A collection of .NET templates for creating plugins for Vendr, the eCommerce package for Umbraco
+A collection .NET templates for common extensions of Vendr, the eCommerce solution for Umbraco v8
