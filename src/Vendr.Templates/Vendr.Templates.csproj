@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <PackageType>Template</PackageType>
-        <PackageVersion>1.0</PackageVersion>
         <PackageId>Vendr.Templates</PackageId>
         <Title>Vendr Templates</Title>
         <Authors>Vendr, Outfield Digital Ltd</Authors>
