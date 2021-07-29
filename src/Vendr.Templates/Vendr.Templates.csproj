@@ -15,13 +15,24 @@
         <NoDefaultExcludes>true</NoDefaultExcludes>
     </PropertyGroup>
   <ItemGroup>
-    <Content Include="Templates\**\*" Exclude="Templates\**\bin\**;Templates\**\obj\**" />
     <Compile Remove="**\*" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Templates\PaymentProvider\assets\logo-128.png" />
-    <None Remove="Templates\PaymentProvider\assets\logo-64.png" />
-    <None Remove="Templates\PaymentProvider\LICENSE.md" />
-    <None Remove="Templates\PaymentProvider\README.md" />
+    <None Remove="PaymentProvider\assets\logo-128.png" />
+    <None Remove="PaymentProvider\assets\logo-64.png" />
+    <None Remove="PaymentProvider\LICENSE.md" />
+    <None Remove="PaymentProvider\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PaymentProvider\.gitignore" />
+    <Content Include="PaymentProvider\.template.config\template.json" />
+    <Content Include="PaymentProvider\assets\logo-128.png" />
+    <Content Include="PaymentProvider\assets\logo-64.png" />
+    <Content Include="PaymentProvider\LICENSE.md" />
+    <Content Include="PaymentProvider\README.md" />
+    <Content Include="PaymentProvider\src\Vendr.Contrib.PaymentProviders.Provider1\Provider1PaymentProvider.cs" />
+    <Content Include="PaymentProvider\src\Vendr.Contrib.PaymentProviders.Provider1\Provider1Settings.cs" />
+    <Content Include="PaymentProvider\src\Vendr.Contrib.PaymentProviders.Provider1\Vendr.Contrib.PaymentProviders.Provider1.csproj" />
+    <Content Include="PaymentProvider\Vendr.Contrib.PaymentProviders.Provider1.sln" />
   </ItemGroup>
 </Project>
