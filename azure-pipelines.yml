@@ -1,0 +1,75 @@
+# ASP.NET
+# Build and test ASP.NET projects.
+# Add steps that publish symbols, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
+
+trigger:
+  branches:
+    include: 
+      - dev
+      - hotfix/*
+      - release/*
+  tags:
+    include:
+      - v*
+
+variables:
+  - group: 'vendr'
+  - name: 'vmImageName'
+    value: 'vs2017-win2016'
+  - name: 'nuGetOrgServiceCreds'
+    value: 'NuGet.org (Vendr)'
+  - name: 'packageName'
+    value: 'Vendr.Templates'
+
+stages:
+
+  - stage: build
+    displayName: Build
+    dependsOn: [  ]
+    pool:
+      vmImage: $(vmImageName)
+    jobs:
+      - task: CmdLine@2
+        inputs:
+          script: './build.cmd Pack'
+      - task: PublishBuildArtifacts@1
+        inputs:
+          pathToPublish: './artifacts'
+          artifactName: artifacts
+
+  - stage: deploy
+    displayName: Deploy
+    condition: succeeded()
+    dependsOn: [ build ]
+
+    jobs:
+      - deployment: deploy
+        displayName: Deploy
+        environment: 'development'
+        pool:
+          vmImage: $(vmImageName)
+
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+
+                # Unstable Deploy
+                - task: NuGetCommand@2
+                  displayName: 'Deploy to unstable feed'
+                  inputs:
+                    command: 'push'
+                    packagesToPush: '$(Pipeline.Workspace)/artifacts/**/*.nupkg;!$(Pipeline.Workspace)/artifacts/**/*.snupkg'
+                    nuGetFeedType: 'internal'
+                    publishVstsFeed: '576196d3-9f20-4a86-8fd6-b0d7428fe5ee/cfadaa44-aa4e-45d7-8303-91a38d020c50'
+
+                # Realease Deploy
+                - task: NuGetCommand@2
+                  displayName: 'Deploy to NuGet.org'
+                  condition: and(succeeded(), startsWith(variables['build.sourceBranch'], 'refs/tags/v'))
+                  inputs:
+                    command: push
+                    nuGetFeedType: external
+                    packagesToPush: '$(Pipeline.Workspace)/artifacts/**/*.nupkg;!$(Pipeline.Workspace)/artifacts/**/*.snupkg'
+                    publishFeedCredentials: '$(nuGetOrgServiceCreds)'
