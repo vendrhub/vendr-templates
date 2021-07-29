@@ -1,1 +1,15 @@
-next-version: 0.1.0
+next-version: 0.1.1
+branches:
+  master:
+    regex: ^ma[ster|in]
+  release:
+    mode: ContinuousDeployment
+  feature:
+    mode: ContinuousDeployment
+  pull-request:
+    regex: ^(pull|pull\-requests|pr|patch)[/-]
+    mode: ContinuousDeployment
+  hotfix:
+    mode: ContinuousDeployment
+  support:
+    mode: ContinuousDeployment
