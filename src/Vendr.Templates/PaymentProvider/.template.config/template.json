@@ -4,7 +4,7 @@
     "classifications": [ "Vendr", "Umbraco" ],
     "identity": "Vendr.PaymentProvider",
     "name": "Vendr Payment Provider Project",
-    "shortName": "vendrpaymentprovider",
+    "shortName": "vendr-payment-provider",
     "tags": {
         "language": "C#",
         "type": "project"
