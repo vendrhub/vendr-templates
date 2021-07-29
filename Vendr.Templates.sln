@@ -5,12 +5,16 @@ VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vendr.Templates", "src\Vendr.Templates\Vendr.Templates.csproj", "{F5698074-9952-4A9D-A406-268852BC49AF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{918985A1-6067-4095-B492-2CC3BE74AE2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{918985A1-6067-4095-B492-2CC3BE74AE2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{918985A1-6067-4095-B492-2CC3BE74AE2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5698074-9952-4A9D-A406-268852BC49AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F5698074-9952-4A9D-A406-268852BC49AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5698074-9952-4A9D-A406-268852BC49AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
