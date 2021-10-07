@@ -7,6 +7,7 @@
         <Description>Templates for Vendr, the eCommerce package for Umbraco.</Description>
         <PackageTags>dotnet-new;templates;vendr;umbraco</PackageTags>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageIcon>logo-128.png</PackageIcon>
         <IncludeContentInPack>true</IncludeContentInPack>
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <ContentTargetFolders>content</ContentTargetFolders>
@@ -40,4 +41,11 @@
     <Content Include="PaymentProvider\src\Vendr.Contrib.PaymentProviders.Provider1\Vendr.Contrib.PaymentProviders.Provider1.csproj" />
     <Content Include="PaymentProvider\Vendr.Contrib.PaymentProviders.Provider1.sln" />
   </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\assets\logo-128.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
 </Project>
