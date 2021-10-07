@@ -19,6 +19,9 @@
   <ItemGroup>
     <None Remove="PaymentProvider\assets\logo-128.png" />
     <None Remove="PaymentProvider\assets\logo-64.png" />
+    <None Remove="PaymentProvider\build.cmd" />
+    <None Remove="PaymentProvider\build.ps1" />
+    <None Remove="PaymentProvider\build\Umbraco\Vendr.Contrib.PaymentProviders.Provider1.package.xml" />
     <None Remove="PaymentProvider\LICENSE.md" />
     <None Remove="PaymentProvider\README.md" />
   </ItemGroup>
@@ -27,6 +30,9 @@
     <Content Include="PaymentProvider\.template.config\template.json" />
     <Content Include="PaymentProvider\assets\logo-128.png" />
     <Content Include="PaymentProvider\assets\logo-64.png" />
+    <Content Include="PaymentProvider\build.cmd" />
+    <Content Include="PaymentProvider\build.ps1" />
+    <Content Include="PaymentProvider\build\Umbraco\Vendr.Contrib.PaymentProviders.Provider1.package.xml" />
     <Content Include="PaymentProvider\LICENSE.md" />
     <Content Include="PaymentProvider\README.md" />
     <Content Include="PaymentProvider\src\Vendr.Contrib.PaymentProviders.Provider1\Provider1PaymentProvider.cs" />
