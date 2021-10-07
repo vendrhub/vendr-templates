@@ -4,7 +4,16 @@ VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vendr.Contrib.PaymentProviders.Provider1", "src\Vendr.Contrib.PaymentProviders.Provider1\Vendr.Contrib.PaymentProviders.Provider1.csproj", "{F5698074-9952-4A9D-A406-268852BC49AF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{95C0A77F-9D4E-46CE-930C-BE7044C8550F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{81D9FEAB-E6BC-404C-8AE1-89338257A03D}"
+	ProjectSection(SolutionItems) = preProject
+		build.cmd = build.cmd
+		build.ps1 = build.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Umbraco", "Umbraco", "{BF93B9FF-8CDF-4577-9048-64A88C40CBDD}"
+	ProjectSection(SolutionItems) = preProject
+		build\Umbraco\Vendr.Contrib.PaymentProviders.Provider1.package.xml = build\Umbraco\Vendr.Contrib.PaymentProviders.Provider1.package.xml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +30,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BF93B9FF-8CDF-4577-9048-64A88C40CBDD} = {81D9FEAB-E6BC-404C-8AE1-89338257A03D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CC19E744-032F-49E5-9BF2-ECE8540834AA}

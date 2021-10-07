@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <PackageType>Template</PackageType>
-        <PackageVersion>1.0</PackageVersion>
         <PackageId>Vendr.Templates</PackageId>
         <Title>Vendr Templates</Title>
         <Authors>Vendr, Outfield Digital Ltd</Authors>
@@ -12,15 +11,33 @@
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <ContentTargetFolders>content</ContentTargetFolders>
         <NoWarn>$(NoWarn);NU5128</NoWarn>
+        <NoDefaultExcludes>true</NoDefaultExcludes>
     </PropertyGroup>
   <ItemGroup>
-    <Content Include="Templates\**\*" Exclude="Templates\**\bin\**;Templates\**\obj\**" />
     <Compile Remove="**\*" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Templates\PaymentProvider\assets\logo-128.png" />
-    <None Remove="Templates\PaymentProvider\assets\logo-64.png" />
-    <None Remove="Templates\PaymentProvider\LICENSE.md" />
-    <None Remove="Templates\PaymentProvider\README.md" />
+    <None Remove="PaymentProvider\assets\logo-128.png" />
+    <None Remove="PaymentProvider\assets\logo-64.png" />
+    <None Remove="PaymentProvider\build.cmd" />
+    <None Remove="PaymentProvider\build.ps1" />
+    <None Remove="PaymentProvider\build\Umbraco\Vendr.Contrib.PaymentProviders.Provider1.package.xml" />
+    <None Remove="PaymentProvider\LICENSE.md" />
+    <None Remove="PaymentProvider\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PaymentProvider\.gitignore" />
+    <Content Include="PaymentProvider\.template.config\template.json" />
+    <Content Include="PaymentProvider\assets\logo-128.png" />
+    <Content Include="PaymentProvider\assets\logo-64.png" />
+    <Content Include="PaymentProvider\build.cmd" />
+    <Content Include="PaymentProvider\build.ps1" />
+    <Content Include="PaymentProvider\build\Umbraco\Vendr.Contrib.PaymentProviders.Provider1.package.xml" />
+    <Content Include="PaymentProvider\LICENSE.md" />
+    <Content Include="PaymentProvider\README.md" />
+    <Content Include="PaymentProvider\src\Vendr.Contrib.PaymentProviders.Provider1\Provider1PaymentProvider.cs" />
+    <Content Include="PaymentProvider\src\Vendr.Contrib.PaymentProviders.Provider1\Provider1Settings.cs" />
+    <Content Include="PaymentProvider\src\Vendr.Contrib.PaymentProviders.Provider1\Vendr.Contrib.PaymentProviders.Provider1.csproj" />
+    <Content Include="PaymentProvider\Vendr.Contrib.PaymentProviders.Provider1.sln" />
   </ItemGroup>
 </Project>
