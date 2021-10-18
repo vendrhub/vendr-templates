@@ -16,7 +16,7 @@
         </package>
         <author>
             <name>Vendr Community</name>
-            <website>https://our.umbraco.org</website>
+            <website>https://our.umbraco.com</website>
         </author>
         <readme>Provider1 payment provider for Vendr, the eCommerce package for Umbraco</readme>
     </info>
