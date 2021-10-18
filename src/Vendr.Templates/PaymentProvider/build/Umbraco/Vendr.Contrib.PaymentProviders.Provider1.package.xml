@@ -3,7 +3,7 @@
 
     <info>
         <package>
-            <name>Vendr.PaymentProviders.Provider1</name>
+            <name>Vendr.Contrib.PaymentProviders.Provider1</name>
             <version>0.0.0</version>
             <license url="https://opensource.org/licenses/MIT">MIT</license>
             <url>https://vendr.net</url>
